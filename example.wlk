@@ -65,23 +65,33 @@ class Martillo inherits ArmaContundente{
 }
 
 class Casco {
-  method puntosDeArmadura(){
+  method puntosDeArmadura(luchador){
     return 10
   }
 }
 
 class Escudo{
-  method puntosDeArmadura(){
-    return 5 
+  method puntosDeArmadura(luchador){
+    return 5 + luchador.destreza() * 0.1
   }
 }
 
 class Gladiador{
   var vida = 100
+  var armaActual = Espada
+  
 
   method perderVida()
+
+  method destreza(){
+    return 15
+  }
 
   method atacar()
 
   method defender()
+}
+
+class Mirmillon inherits Gladiador{
+  const armero = [Espada, Daga, Hacha]
 }
