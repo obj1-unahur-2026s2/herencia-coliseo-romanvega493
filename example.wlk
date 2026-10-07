@@ -94,4 +94,19 @@ class Gladiador{
 
 class Mirmillon inherits Gladiador{
   const armero = [Espada, Daga, Hacha]
+
+  
+}
+
+class Dimachaerus inherits Gladiador{
+  const armero = [Espada, Daga, Hacha, Maza, Martillo]
+  var destreza 
+
+  method fuerza(){
+    return 10
+  }
+  
+  override method destreza() {
+    return destreza
+  }
 }
